@@ -1,1 +1,1 @@
-# Becker´s Sushi
+# Yoshi Sushi
