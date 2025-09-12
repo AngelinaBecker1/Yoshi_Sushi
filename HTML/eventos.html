@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoshi Sushi - Eventos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="IMG/transferir (1).jpg" alt="Yoshi Sushi">
+        </div>
+
+        <nav class="menu" id="menu">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>
+            <a href="inicio.html">Início</a>
+            <a href="menu.html">Menu</a>
+            <a href="cadastro.html">Cadastro</a>
+            <a href="reserva.html">Reserva</a>
+            <a href="eventos.html" class="active">Eventos</a>
+        </nav>
+        
+        <button class="menu-btn" onclick="openMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </button>
+    </header>
+
+    <section class="destaques">
+        <h2>Eventos Especiais</h2>
+        
+        <div class="evento">
+            <div class="evento-img">
+                <img src="IMG/noite do sake.jpg" alt="Noite do Sake">
+            </div>
+            <div class="evento-info">
+                <h3>Noite do Sake</h3>
+                <p class="evento-data">15 de Novembro, 2023 - 19h às 22h</p>
+                <p>Uma noite especial dedicada aos apreciadores de sake. Degustação de diferentes variedades de sake japonês harmonizadas com petiscos especiais preparados pelo nosso chef.</p>
+                <p>Valor: R$ 99,90 por pessoa</p>
+                <a href="reserva.html" class="btn">Reservar</a>
+            </div>
+        </div>
+        
+        <div class="evento">
+            <div class="evento-img">
+                <img src="IMG/workshop sushi.jpg" alt="Workshop de Sushi">
+            </div>
+            <div class="evento-info">
+                <h3>Workshop de Sushi</h3>
+                <p class="evento-data">22 de Novembro, 2023 - 14h às 17h</p>
+                <p>Aprenda a fazer seus próprios sushis com nosso chef especializado. Inclui todos os ingredientes, certificado e você leva para casa o que preparar.</p>
+                <p>Valor: R$ 149,90 por pessoa</p>
+                <a href="reserva.html" class="btn">Reservar</a>
+            </div>
+        </div>
+        
+        <div class="evento">
+            <div class="evento-img">
+                <img src="IMG/jantar romantico uiuiui.jpg" alt="Jantar Romântico">
+            </div>
+            <div class="evento-info">
+                <h3>Jantar Romântico</h3>
+                <p class="evento-data">Todos os sábados - 19h às 23h</p>
+                <p>Um jantar especial para casais, com menu degustação, taça de espumante, decoração especial e música ambiente.</p>
+                <p>Valor: R$ 199,90 por casal</p>
+                <a href="reserva.html" class="btn">Reservar</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="form-container">
+        <h2>Quer organizar um evento conosco?</h2>
+        <form id="eventoForm" onsubmit="return validateForm('eventoForm') && showSuccessMessage()">
+            <div class="form-group">
+                <label for="nomeEvento">Nome completo</label>
+                <input type="text" id="nomeEvento" name="nomeEvento" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="emailEvento">E-mail</label>
+                <input type="email" id="emailEvento" name="emailEvento" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="telefoneEvento">Telefone</label>
+                <input type="tel" id="telefoneEvento" name="telefoneEvento" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="tipoEvento">Tipo de evento</label>
+                <select id="tipoEvento" name="tipoEvento" required>
+                    <option value="">Selecione</option>
+                    <option value="aniversario">Aniversário</option>
+                    <option value="casamento">Casamento</option>
+                    <option value="empresarial">Evento Empresarial</option>
+                    <option value="outro">Outro</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="dataEvento">Data prevista</label>
+                <input type="date" id="dataEvento" name="dataEvento" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="convidados">Número de convidados</label>
+                <input type="number" id="convidados" name="convidados" min="10" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="mensagemEvento">Mensagem</label>
+                <textarea id="mensagemEvento" name="mensagemEvento" required></textarea>
+            </div>
+            
+            <button type="submit">Solicitar Contato</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>Yoshi Sushi &copy; 2025 - Todos os direitos reservados</p>
+        <p>Rua das Flores, 123 - Centro - Curitiba/PR</p>
+        <p>Telefone: (55) 3456-7890</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
