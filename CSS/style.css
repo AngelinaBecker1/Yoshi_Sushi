@@ -1,0 +1,63 @@
+.menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: var(--branco);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 80px;
+    z-index: 1000;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.menu a {
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--preto);
+    display: block;
+    transition: 0.3s;
+    border-bottom: 1px solid #f8e1e7;
+    position: relative;
+}
+
+.menu a:hover {
+    background-color: #fff0f5;
+    color: var(--vermelho-escuro);
+}
+
+.tres-barrinhas {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    z-index: 1001;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.tres-barrinhas .bar {
+    width: 30px;
+    height: 4px;
+    background-color: var(--branco);
+    margin: 6px 0;
+    transition: 0.3s;
+}
+
+.tres-barrinhas:hover .bar {
+    background-color: #fff0f5;
+}
+
+header {
+    background: green;
+    padding: 15px 0;
+    text-align: left;
+    color: white;
+    margin-bottom: 30px;
+    border-radius: 0 0 20px 20px;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
