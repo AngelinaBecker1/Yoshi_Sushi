@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoshi Sushi - Reserva</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="IMG/transferir (1).jpg" alt="Yoshi Sushi">
+        </div>
+
+        <nav class="menu" id="menu">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>
+            <a href="inicio.html">Início</a>
+            <a href="menu.html">Menu</a>
+            <a href="cadastro.html">Cadastro</a>
+            <a href="reserva.html" class="active">Reserva</a>
+            <a href="eventos.html">Eventos</a>
+        </nav>
+        
+        <button class="menu-btn" onclick="openMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </button>
+    </header>
+
+    <div class="form-container">
+        <h2>Faça sua reserva</h2>
+        <form id="reservaForm" onsubmit="return validateForm('reservaForm') && showSuccessMessage()">
+            <div class="form-group">
+                <label for="nomeReserva">Nome completo</label>
+                <input type="text" id="nomeReserva" name="nomeReserva" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="emailReserva">E-mail</label>
+                <input type="email" id="emailReserva" name="emailReserva" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="telefoneReserva">Telefone</label>
+                <input type="tel" id="telefoneReserva" name="telefoneReserva" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="dataReserva">Data da reserva</label>
+                <input type="date" id="dataReserva" name="dataReserva" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="horaReserva">Horário</label>
+                <input type="time" id="horaReserva" name="horaReserva" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="pessoas">Número de pessoas</label>
+                <select id="pessoas" name="pessoas" required>
+                    <option value="">Selecione</option>
+                    <option value="1">1 pessoa</option>
+                    <option value="2">2 pessoas</option>
+                    <option value="3">3 pessoas</option>
+                    <option value="4">4 pessoas</option>
+                    <option value="5">5 pessoas</option>
+                    <option value="6">6 pessoas</option>
+                    <option value="7">7 ou mais pessoas</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="observacoes">Observações ou pedidos especiais</label>
+                <textarea id="observacoes" name="observacoes"></textarea>
+            </div>
+            
+            <button type="submit">Confirmar Reserva</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>Yoshi Sushi &copy; 2025 - Todos os direitos reservados</p>
+        <p>Rua das Flores, 123 - Centro - Curitiba/PR</p>
+        <p>Telefone: (55) 3456-7890</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
